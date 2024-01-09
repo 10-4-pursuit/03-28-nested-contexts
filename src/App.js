@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext, useState } from "react";
+import "./App.css";
+import ThemeContextProvider from "./components/ThemeContextProvider";
+import ThemeContext from "./context/ThemeContext";
+import Test from "./components/Test";
+import LanguageContext from "./context/LanguageContext";
+import LanguageProvider from "./components/LanguageProvider";
+
 
 function App() {
+ const {theme, toggleTheme}=useContext(ThemeContext);
+ const {language, toggleLanguage}=useContext(LanguageContext);
+ console.log(theme)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div>
+            <h1>Pick a Theme and Language</h1>
+            <h2><Test /></h2>
+            <button className='theme-button' onClick={toggleTheme}>Theme Button</button>
+            <button className='language-button' onClick={toggleLanguage}>Language Button</button>
+            </div>
+ 
   );
 }
 
 export default App;
+ 
