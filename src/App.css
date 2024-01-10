@@ -7,6 +7,21 @@
   pointer-events: none;
 }
 
+.HomePage {
+  color: purple;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  color:blueviolet;
+  font-family: fantasy;
+  font-weight: 800;
+
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
