@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useContext, useState } from "react";
+import ThemeContext from "./context/ThemeContext";
+import LanguageContext from "./context/LanguageContext";
+import { ThemeSwitcher } from "./component/ThemeSwitcher";
+import { LanguageSelector } from "./component/LanguageSelector";
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+  const { language, toggleLanguage } = useContext(LanguageContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundColor:theme !== "light" ? "gray" : "#fff", height: "100vh", width: "100vw" }}>
+      <h2>{language} is a beautiful language </h2>
+      <div>
+      <ThemeSwitcher />
+      <LanguageSelector />
+      </div>
+      </div>
+      </>
+   
   );
 }
 
