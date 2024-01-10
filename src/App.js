@@ -14,11 +14,11 @@ function App() {
 
   return (
     
-      <div>
-            <h1>Pick a Theme and Language</h1>
+      <div className="HomePage">
+            <h1>PICK A THEME AND LANGUAGE</h1>
             <h2><Test /></h2>
-            <button className='theme-button' onClick={toggleTheme}>Theme Button</button>
-            <button className='language-button' onClick={toggleLanguage}>Language Button</button>
+            <button className='theme-button' onClick={toggleTheme}>Change Theme</button> 
+            <button className='language-button' onClick={toggleLanguage}>Change Language</button>
             </div>
  
   );

@@ -11,8 +11,8 @@ function Test() {
 
   return (
     <div>
-      <p>{theme} is the theme</p> {/* Paragraph element using context value */}
-      <p>{language} is the language</p> 
+      <p>{theme} is the Theme</p> {/* Paragraph element using context value */}
+      <p>{language} is the Language</p> 
     </div>
   );
 }

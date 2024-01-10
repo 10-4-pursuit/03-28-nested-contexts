@@ -4,10 +4,10 @@ import { useState } from "react";
 
 
 export const ThemeProvider = ({children}) => {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('Dark');
 
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+        setTheme((prevTheme) => (prevTheme === 'Light' ? 'Dark' : 'Light'));
       };
 
       return (
