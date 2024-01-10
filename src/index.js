@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from './component/ThemeProvider';
+import { LanguageProvider } from './component/LanguageProvider';
+import { ThemeSwitcher } from './component/ThemeSwitcher';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <LanguageProvider>
+    <ThemeProvider>
     <App />
+   
+    </ThemeProvider>
+    </LanguageProvider>
   </React.StrictMode>
 );
 
