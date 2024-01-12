@@ -12,6 +12,14 @@ export default function LanguageSelector() {
         "Arabic"
     ]
 
+    const languagePhrases = {
+        English: "Hello",
+        Spanish: "Hola",
+        German: "Hallo",
+        Japanese: "こんにちは (Konnichiwa)", 
+        Arabic: "مرحبا (Marhaba)" 
+    };
+
     // Using LanguageContext to access and set the language
     const {language, setLanguage} = React.useContext(LanguageContext)
 
@@ -21,7 +29,7 @@ export default function LanguageSelector() {
             <select onChange={(event) => setLanguage(event.target.value)}>
                 {availableLanguages.map(language => (<option value={language}>{language}</option>))}
             </select>
-            {language}
+            {languagePhrases[language]}
         </div>
     );
 }
