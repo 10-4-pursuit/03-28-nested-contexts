@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+// Importing the necessary CSS and components
 import './App.css';
+import LanguageProvider from './components/LanguageProvider';
+import LanguageSelector from './components/LanguageSelector';
+import ThemeProvider from './components/ThemeProvider';
+import ThemeSelector from './components/ThemeSelector';
 
+// App Component - serves as the root of the application
 function App() {
+  // Wrapping LanguageSelector and ThemeSelector inside their respective Providers
+  // This allows these selectors to access the language and theme context
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LanguageProvider>
+        <ThemeProvider>
+          <LanguageSelector />
+          <ThemeSelector />
+        </ThemeProvider>
+      </LanguageProvider>
     </div>
   );
 }
 
+// Making App component available for import
 export default App;
