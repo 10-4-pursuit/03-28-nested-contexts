@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+.app {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
