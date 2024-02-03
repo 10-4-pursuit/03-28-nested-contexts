@@ -1,5 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ThemeSwitcher from "./ThemeSwitcher";
+import LanguageSelector from "./LanguageSelector";
+import { ThemeProvider } from "./ThemeContext";
+import { LanguageProvider } from "./LanguageContext";
 
 function App() {
   return (
@@ -9,6 +13,15 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <LanguageProvider>
+          <ThemeProvider>
+            <div>
+              <h1>Language Selector React App</h1>
+              <ThemeSwitcher />
+              <LanguageSelector />
+            </div>
+          </ThemeProvider>
+        </LanguageProvider>
         <a
           className="App-link"
           href="https://reactjs.org"
